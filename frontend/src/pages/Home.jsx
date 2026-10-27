@@ -14,8 +14,6 @@ import {
   ABOUT_IMAGE,
   CATEGORY_TILES,
   CONTACT,
-  HERO_POSTER,
-  HERO_VIDEO,
   LOCATIONS,
   PROPERTIES,
 } from "@/data/properties";
@@ -34,23 +32,14 @@ const SERVICES = [
 const Home = () => {
   const [featured, setFeatured] = useState(PROPERTIES.filter((p) => p.featured));
   const heroRef = useRef(null);
-  const videoRef = useRef(null);
   const firstVisit = !sessionStorage.getItem("ap_loaded");
   const base = firstVisit ? 2.0 : 0.1;
-
-  useEffect(() => {
-    const v = videoRef.current;
-    if (v) {
-      v.muted = true;
-      v.play().catch(() => {});
-    }
-  }, []);
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  const videoY = useTransform(scrollYProgress, [0, 1], ["0%", "16%"]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "16%"]);
   const fade = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   useEffect(() => {
@@ -79,21 +68,14 @@ const Home = () => {
       />
       <Navbar />
 
-      {/* Hero */}
+      {/* Hero Section with Image */}
       <section ref={heroRef} className="relative flex min-h-[100svh] flex-col overflow-hidden bg-charcoal">
-        <motion.div style={{ y: videoY }} className="absolute inset-0 scale-[1.12]">
-          <video
-            ref={videoRef}
-            data-testid="hero-video-container"
+        <motion.div style={{ y: imageY }} className="absolute inset-0 scale-[1.12]">
+          <img
+            src="/herosecion.jpg"
+            alt="Amazing Properties Bahrain Hero"
             className="h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={HERO_POSTER}
-          >
-            <source src={HERO_VIDEO} type="video/mp4" />
-          </video>
+          />
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/45 to-charcoal/85" />
 
