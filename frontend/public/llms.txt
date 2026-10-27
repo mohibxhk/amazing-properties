@@ -1,0 +1,18 @@
+# Amazing Properties — Bahrain
+
+Amazing Properties is a registered real estate company based in Tubli, Bahrain. It handles property sales, property rentals, residential and commercial properties, and property advertising across the Kingdom of Bahrain.
+
+The company is registered under Commercial Registration 146568-02 and holds Bahrain RERA Real Estate Brokers License 2024 10/1315. Its agents work in English, Arabic, Urdu and Hindi.
+
+## Pages
+
+- / — Homepage with featured listings, property search and company overview
+- /for-sale — Properties currently listed for sale
+- /for-rent — Properties currently listed for rent
+- /property — Individual property details
+- /about — Company background, registration and languages
+- /contact — Phone, email, office address and enquiry form
+
+## Areas covered
+
+Manama, Juffair, Seef, Amwaj Island, Saar, Riffa, Tubli, Mahooz, Zinj, Hidd, Muharraq, Sanad, Isa Town, Barbar, Hamala.
