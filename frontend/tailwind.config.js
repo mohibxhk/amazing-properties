@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    blocklist: ["overline"],
-    darkMode: ["class"],
-    content: [
+  blocklist: ["overline"],
+  darkMode: ["class"],
+  content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html"
   ],
@@ -58,9 +58,10 @@ module.exports = {
         ring: 'hsl(var(--ring))'
       },
       fontFamily: {
-        display: ['"Plus Jakarta Sans"', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        serif: ['"Cormorant Garamond"', 'serif']
+        sans: ['Wavehaus', 'sans-serif'],
+        display: ['Wavehaus', 'sans-serif'],
+        body: ['Wavehaus', 'sans-serif'],
+        serif: ['Wavehaus', 'sans-serif']
       },
       keyframes: {
         'accordion-down': {
