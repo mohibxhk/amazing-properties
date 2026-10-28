@@ -1,3 +1,4 @@
+import Listings from "@/pages/Listings";
 import { useEffect, useState } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
