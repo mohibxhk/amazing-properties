@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, ArrowUpRight, Phone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Phone, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Marquee from "@/components/Marquee";
@@ -178,7 +178,7 @@ const Home = () => {
               </h2>
             </div>
             <Link
-              to="/for-rent"
+              to="/properties"
               className="group flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal transition-colors hover:text-gold-dark"
               data-testid="featured-view-all-link"
             >
@@ -241,6 +241,37 @@ const Home = () => {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Office Location Map Section - Right Above "Why Amazing Properties" */}
+      <section className="pt-20 lg:pt-28" data-testid="office-map-section">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold-dark">
+              <MapPin className="h-4 w-4" /> Office Location
+            </div>
+            <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-charcoal sm:text-3xl lg:text-4xl">
+              Visit Us in Tubli, Bahrain
+            </h2>
+            <p className="mt-2 text-sm text-stone-600">
+              {CONTACT.address}
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-8 overflow-hidden border border-sand bg-cream">
+              <iframe
+                title="Amazing Properties Tubli Bahrain Location"
+                src="https://maps.google.com/maps?q=Tubli,%20Bahrain&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -442,7 +473,7 @@ const Home = () => {
                 <Phone className="h-4 w-4" /> Talk to an Agent
               </a>
               <Link
-                to="/for-rent"
+                to="/properties"
                 data-testid="cta-explore-properties"
                 className="flex items-center gap-2 border border-charcoal/30 px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal transition-colors duration-300 hover:border-gold hover:text-gold-dark"
               >
