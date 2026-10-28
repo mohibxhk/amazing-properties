@@ -1,4 +1,3 @@
-import Listings from "@/pages/Listings";
 import { useEffect, useState } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
@@ -53,6 +52,7 @@ function App() {
       </AnimatePresence>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/properties" element={<Listings />} />
         <Route path="/for-sale" element={<Listings purpose="sale" />} />
         <Route path="/for-rent" element={<Listings purpose="rent" />} />
         <Route path="/property" element={<PropertyDetails />} />
