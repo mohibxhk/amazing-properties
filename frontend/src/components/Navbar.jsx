@@ -6,6 +6,7 @@ import Logo from "@/components/Logo";
 
 const LINKS = [
   { to: "/", label: "Home", testid: "nav-link-home" },
+  { to: "/properties", label: "Listings", testid: "nav-link-listings" },
   { to: "/for-sale", label: "For Sale", testid: "nav-link-for-sale" },
   { to: "/for-rent", label: "For Rent", testid: "nav-link-for-rent" },
   { to: "/about", label: "About", testid: "nav-link-about" },
@@ -114,42 +115,4 @@ const Navbar = () => {
               {LINKS.map((l, i) => (
                 <motion.div
                   key={l.to}
-                  initial={{ opacity: 0, x: -14 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.08 * i, duration: 0.4 }}
-                >
-                  <NavLink
-                    to={l.to}
-                    end={l.to === "/"}
-                    data-testid={`mobile-${l.testid}`}
-                    className="block border-b border-ivory/10 py-4 font-display text-2xl font-medium tracking-tight text-ivory"
-                  >
-                    {l.label}
-                  </NavLink>
-                </motion.div>
-              ))}
-            </nav>
-            <div className="mt-auto flex flex-col gap-3">
-              <Link
-                to="/login"
-                data-testid="mobile-nav-login-link"
-                className="border border-ivory/30 py-3 text-center text-sm font-medium uppercase tracking-[0.16em] text-ivory"
-              >
-                Login
-              </Link>
-              <Link
-                to="/add-property"
-                data-testid="mobile-nav-cta-list-property"
-                className="bg-gold py-3 text-center text-sm font-semibold uppercase tracking-[0.16em] text-charcoal"
-              >
-                Add Property
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
-};
-
-export default Navbar;
+                  initial={{ opacity: 0, x: -14
